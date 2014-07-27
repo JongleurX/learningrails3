@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 gem 'rails', '3.2.19'
-gem 'pg', '0.17.1' # PostgreSQL  
+gem 'pg', '0.17.1' # PostgreSQL
 
 group :development, :test do
   # gem 'sqlite3', '1.3.9' # Embedded database for quick setup
@@ -11,7 +11,13 @@ end
 
 # Gems used only for assets; not neede for production environments by default.
 group :assets do
-  gem 'sass-rails',   '3.2.6'
+  #gem 'sass-rails', github: 'rails/sass-rails', branch: '3-2-stable'
+    gem 'bootstrap-sass', '2.1'
+    gem 'sass-rails'
+  # gem 'bootstrap-sass',
+  #   git: 'https://github.com/twbs/bootstrap-sass',
+  #   ref: '540ad23430b1bdb2c72591daf61507ec9e38e468'
+  # gem 'bootstrap-sass', '3.2.0.0'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '2.5.3'
 end
