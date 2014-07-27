@@ -1,11 +1,17 @@
-require 'spec_helper'
-#require 'rails_helper'
+# require 'spec_helper'
+require 'rails_helper'
 
 describe "Static pages" do
   describe "Home page" do
     it "should have the content 'Sample App'" do
+
+      # Uses the Capybara function `visit` to simulate visiting the URI
+      # /static_pages/home in a browser
       visit '/static_pages/home'
-      page.should have_content('Sample App')
+
+      # Uses the page variable (also provided by Capybara) to test that
+      # the resulting page has the right content.      
+      expect(page).to have_content('Sample App')
     end
   end
 end
