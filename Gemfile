@@ -6,6 +6,7 @@ gem 'rails', '3.2.19'
 group :development, :test do
   gem 'sqlite3', '1.3.9' # Embedded database for quick setup
   gem 'rspec-rails', '3.0.2' # Test framework
+  gem 'capybara', '2.4.1' # Simulates a user's interaction
 end
 
 group :production do # Tells Heroku what it needs to install
@@ -13,7 +14,7 @@ group :production do # Tells Heroku what it needs to install
 end
 
 group :test do
-  gem 'capybara', '2.4.1' # Simulates a user's interaction
+  # gem 'capybara', '2.4.1' # Simulates a user's interaction
 end
 
 # Gems used only for assets; not neede for production environments by default.
