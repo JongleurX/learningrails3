@@ -1,10 +1,14 @@
-require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe "UserPages", :type => :request do
-  describe "GET /user_pages" do
-    it "works! (now write some real specs)" do
-      get user_pages_index_path
-      expect(response.status).to be(200)
-    end
+describe "User pages" do
+
+  subject { page }
+
+  describe "signup page" do
+    before { visit signup_path }
+    
+    it { expect(page).to have_selector('h1',    text: 'Sign up') }
+    it { expect(page).to have_title full_title('Sign up') }
+    
   end
 end
