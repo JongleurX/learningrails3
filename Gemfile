@@ -2,18 +2,11 @@ source 'https://rubygems.org'
 
 ruby '2.0.0'
 gem 'rails', '3.2.19'
+gem 'pg', '0.17.1' # PostgreSQL  
 
 group :development, :test do
-  gem 'sqlite3', '1.3.9' # Embedded database for quick setup
+  # gem 'sqlite3', '1.3.9' # Embedded database for quick setup
   gem 'rspec-rails', '3.0.2' # Test framework
-end
-
-group :production do # Tells Heroku what it needs to install
-  gem 'pg', '0.17.1' # PostgreSQL
-end
-
-group :test do
-  gem 'capybara', '2.4.1' # Simulates a user's interaction
 end
 
 # Gems used only for assets; not neede for production environments by default.
@@ -24,6 +17,11 @@ group :assets do
 end
 
 gem 'jquery-rails', '3.1.1'
+
+group :test do
+  gem 'capybara', '2.4.1' # Simulates a user's interaction
+  gem 'rake', '10.3.2'
+end
 
 # The >= notation always performs upgrades, whereas the ~> 3.2.2 notation only
 # performs upgrades to minor point releases (e.g., from 3.2.1 to 3.2.2), but
