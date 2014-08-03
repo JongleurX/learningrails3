@@ -10,8 +10,13 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :name
+  attr_accessible :name, :email
   has_many :microposts
+
+  validates :name,  presence: true, length: { maximum: 50 }
+ 
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i    # Constant
+  validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }
 end
 
 # By default, all model attributes are accessible. What `attr_accessible` does
