@@ -7,6 +7,7 @@ gem 'pg', '0.17.1' # PostgreSQL
 group :development, :test do
   # gem 'sqlite3', '1.3.9' # Embedded database for quick setup
   gem 'rspec-rails', '3.0.2' # Test framework
+  gem 'annotate', '2.6.5'
 end
 
 # Gems used only for assets; not neede for production environments by default.
